@@ -28,7 +28,7 @@ define('DB_USER', 'userwp');
 define('DB_PASSWORD', 'uwordpress00');
 
 /** Adresse de l’hébergement MySQL. */
-define('DB_HOST', '78.120.153.164');
+define('DB_HOST', '93.7.199.188');
 
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8mb4');
