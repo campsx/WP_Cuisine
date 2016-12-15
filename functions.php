@@ -33,17 +33,3 @@ add_action('after_setup_theme', 'wpdocs_theme_setup');
 function wpdocs_theme_setup(){
   add_image_size( 'banner', 1240, 150, true);
 }
-
-/* custome post type */
-
-add_action('init' , 'custom_post_type');
-
-function custome_post_type() {
-  register_post_type('events', [
-    'labels' => [
-      'name' => __('events'),
-      'singular_name' => __('event')
-    ],
-    'public' => true
-  ]);
-}
