@@ -9,7 +9,7 @@ if (have_posts()) {
     the_content();
   }
 } else {
-   echo 'fuck you';
+   echo 'error';
 }
 
 $loop = new WP_Query(['post_type' => 'events']);
