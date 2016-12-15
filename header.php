@@ -9,5 +9,4 @@
      ?></title>
      <?php wp_head(); ?>
   </head>
-  <body>
-    <?php  ?>
+  <body <?php body_class(); ?>>

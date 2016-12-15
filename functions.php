@@ -1,7 +1,7 @@
 <?php
 
 function myScriptStyles(){
-  xp_enqueue_style('main_style');
+  wp_enqueue_style('main_style');
 }
 
 
@@ -15,21 +15,19 @@ add_action('init', 'myMenus');
 function mySidebars(){
   register_sidebar([
       'name'   => 'Barre latéral',
-      'description' => 'Cette colone bite',
+      'description' => 'Cette colone',
       'id' => 'sidebar-1'
   ]);
 }
 add_action('widgets_init', 'mySidebars');
 
-/* Image à la une */
-add_theme_support('post-thumbnails');
 
-add_theme_support('custom-background');
 
-/* custom post thumdflgdl */
 
-add_action('after_setup_theme', 'wpdocs_theme_setup');
-
-function wpdocs_theme_setup(){
-  add_image_size( 'banner', 1240, 150, true);
+/* Add bootstrap to the Wordpress theme*/
+function theme_add_bootstrap() {
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js');
 }
+
+add_action( 'wp_enqueue_scripts', 'theme_add_bootstrap' );
