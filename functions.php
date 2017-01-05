@@ -1,9 +1,16 @@
 <?php
 
-function myScriptStyles(){
-  wp_enqueue_style('main_style');
-}
+function wp_Cuisine_scripts(){
 
+  wp_enqueue_style( 'WP_Cuisine-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'wp_Cuisine_scripts' );
+
+/* Add fonts to the Wordpress theme*/
+function wp_Cuisine_fonts(){
+  wp_enqueue_style( 'awesome-font', get_template_directory_uri() . '/css/font-awesome.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'wp_Cuisine_fonts' );
 
 function myMenus(){
   register_nav_menu('main_menu', 'Menu principal');
@@ -20,8 +27,6 @@ function mySidebars(){
   ]);
 }
 add_action('widgets_init', 'mySidebars');
-
-
 
 
 /* Add bootstrap to the Wordpress theme*/
