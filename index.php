@@ -21,6 +21,32 @@ get_header();
 //
 // dynamic_sidebar('sidebar-1');
 ?>
+<section class="accueil">
+
+    <div class="container">
+
+        <div class="div_accueil" onclick="location.href='recettes.php'">
+            <h1 class="title">Top des recettes</h1>
+
+        </div>
+        <div class="div_accueil">
+            <h1 class="title">Recettes populaires</h1>
+
+        </div>
+        <div class="div_accueil">
+            <h1 class="title">Recettes du moment</h1>
+        </div>
+        <div class="div_accueil">
+            <h1 class="title">Les indémodables</h1>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
 
 <?php
 get_footer();

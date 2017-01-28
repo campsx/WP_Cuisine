@@ -6,6 +6,38 @@ Version: 0.0.1
 */
 
 
+/* Accueil */
+
+.div_accueil{
+    height: 150px;
+    width: 80%;
+    margin-left: 10%;
+    margin-left: 10%;
+    overflow: hidden;
+    display: block;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #B2DFDB;
+    opacity: 0.6;
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.3);
+}
+
+.div_accueil:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: #B2DFDB;
+}
+
+section.accueil{
+    background: url("img/sayagata-400px.png") repeat;
+}
+
+/* Page recettes */
+
+
+
+
 /* nav style
 /* ========================================== */
 
