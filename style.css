@@ -9,7 +9,7 @@ Version: 0.0.1
 /* Accueil */
 
 .div_accueil{
-    height: 150px;
+    min-height: 150px;
     width: 80%;
     margin-left: 10%;
     margin-left: 10%;
@@ -44,6 +44,10 @@ section.accueil{
 .navbar-default {
   background-color: #dadadae6;
   border-color: #e7e7e7;
+}
+
+.title-page {
+  margin-top: 60px;
 }
 
 

@@ -1,19 +1,11 @@
 <?php
 get_header();
-//
-// $loop = new WP_Query(['post_type' => 'events']);
-//
-// while ($loop->have_posts()) {
-//   $loop->the_post();
-//   the_title();
-//   the_content();
-// }
-//
-// dynamic_sidebar('sidebar-1');
 ?>
+
 <section class="accueil">
 
     <div class="container">
+      <h1 class="title-page">Category : <?php wp_title(); ?></h1>
 
         <div class="div_accueil">
             <h2 class="title">Derniere recettes</h2>
@@ -36,18 +28,9 @@ get_header();
              ?>
         </div>
 
-        <div class="div_accueil">
-            <h2 class="title">Recettes du moment</h2>
-        </div>
-        <div class="div_accueil">
-            <h2 class="title">Les indémodables</h2>
-        </div>
-
     </div>
 
 </section>
-
-
 
 
 
