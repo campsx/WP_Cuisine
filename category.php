@@ -10,19 +10,24 @@ get_header();
         <h2 class="title">Dernières recettes</h2>
         <?php
             if (have_posts()):
+        ?> 
+                <section class="recettes">
+                <?php
                 while (have_posts()):
                     the_post();
-        ?>
-                    <section class="" 
-                        <?php post_class();?> id="post-<?php the_ID(); ?>">
+                ?>
+                    <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
                         <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
                         <?php the_post_thumbnail('medium'); ?>
-                        <p class><?php the_content(); ?>
+                        <p class=""><?php the_excerpt(); ?></p>
                         <p class="text-right">Par : <?php the_author(); ?> </p>
                         <hr>
-                    </div>
+                    </article>
         <?php
                 endwhile;
+                ?>
+                </section>
+                <?php
             else:
                 echo "<h3>Pas d'article</h3>";
             endif;
