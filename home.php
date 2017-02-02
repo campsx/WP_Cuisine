@@ -1,15 +1,5 @@
 <?php
-get_header();
-//
-// $loop = new WP_Query(['post_type' => 'events']);
-//
-// while ($loop->have_posts()) {
-//   $loop->the_post();
-//   the_title();
-//   the_content();
-// }
-//
-// dynamic_sidebar('sidebar-1');
+  get_header();
 ?>
 <section class="accueil">
 
