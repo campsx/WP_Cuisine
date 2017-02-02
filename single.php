@@ -5,34 +5,31 @@ get_header();
 <section class="accueil">
 
     <div class="container">
-      <h1 class="title-page">Post : <?php wp_title(); ?></h1>
-
-        <div class="div_accueil">
-            <h2 class="title">Derniere recettes</h2>
-            <?php
-              if (have_posts()):
-                while (have_posts()):
-                  the_post();
-            ?>
-                  <div <?php post_class();?> id="post-<?php the_ID(); ?>">
-                    <?php the_post_thumbnail('medium'); ?>
-                    content : <?php the_content(); ?>
-                    type : <?php the_category(","); ?>
-                  </div>
-            <?php
-                endwhile;
-              else:
-                echo "<h3>Pas d'article</h3>";
-              endif;
-             ?>
-        </div>
-
-    </div>
+        <h1 class="title-page">Recettes <?php wp_title(); ?></h1>
+            <section class="div_accueil">
+                <?php
+                    if (have_posts()):
+                        while (have_posts()):
+                            the_post();
+                ?>          
+                            <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
+                                <h2 class="title"><?php the_title();?></h2>
+                            
+                                <?php the_post_thumbnail('medium'); ?>
+                                content : <?php the_content(); ?>
+                                type : <?php the_category(","); ?>
+                            </article>
+          <?php
+              endwhile;
+            else:
+              echo "<h3>Pas d'article</h3>";
+            endif;
+           ?>
+      </section>
+  </div>
 
 </section>
 
 
 
-<?php
-get_footer();
-?>
+<?php get_footer();
