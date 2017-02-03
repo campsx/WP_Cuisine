@@ -36,6 +36,22 @@ section.accueil{
 /* Page recettes */
 
 
+/* Single.php */
+/* =================================================== */
+
+.single .two-colonnes{
+    width: 100%;
+}
+
+.single .two-colonnes .col-1,
+.single .two-colonnes .col-2{
+    float: right;
+}
+
+.single .single-thumbnail{
+	height: 300px;
+	max-width: 100%;   
+}
 
 
 /* nav style
@@ -112,7 +128,6 @@ footer a:hover {
 .social-icon li a:hover {
   background: #1A237E;
 }
-
 
 
 @media (max-width: 1280px) {
