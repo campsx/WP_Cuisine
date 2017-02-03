@@ -6,12 +6,11 @@ get_header();
 
   <div class="container">
     <h2 class="title-page">Catégorie <?php wp_title(); ?></h2>
-      <div class="div_accueil">
+      <section class="div_accueil recettes col-md-8">
         <h2 class="title">Dernières recettes</h2>
         <?php
             if (have_posts()):
-        ?> 
-                <section class="recettes">
+        ?>
                 <?php
                 while (have_posts()):
                     the_post();
@@ -25,14 +24,12 @@ get_header();
                     </article>
         <?php
                 endwhile;
-                ?>
-                </section>
-                <?php
             else:
                 echo "<h3>Pas d'article</h3>";
             endif;
         ?>
-      </div>
+      </section>
+      <?php get_sidebar();?>
   </div>
 
 </section>
