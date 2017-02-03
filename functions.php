@@ -51,3 +51,7 @@ function wp_Cuisine_scripts(){
   wp_enqueue_style( 'WP_Cuisine-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'wp_Cuisine_scripts' );
+
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+}
