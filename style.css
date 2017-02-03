@@ -20,8 +20,26 @@ section.accueil{
     background: url("img/sayagata-400px.png") repeat;
 }
 
+
 section.accueil .container {
   padding-top: 85px;
+}
+
+/* Page 404 */
+section.page404 {
+    background: url("img/footer_lodyas.png") repeat;
+		height: 60vh;
+}
+
+#div404 {
+    height: 200px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
 }
 
 /* Page recettes */
