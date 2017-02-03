@@ -47,7 +47,8 @@ section.page404 {
 /* sidebar */
 
 .sidebar {
-  background-color: white;
+  border-left: solid 1px white;
+  background-color: #B2DFDB;
 }
 
 .searchform {

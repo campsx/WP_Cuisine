@@ -5,7 +5,7 @@
 
     <div class="container">
 
-      <div class="div_accueil col-md-7">
+      <div class="div_accueil col-md-8">
           <h2 class="title">Derniere recettes</h2>
           <?php
             if (have_posts()):
