@@ -10,22 +10,9 @@ Version: 0.0.1
 
 .div_accueil{
     min-height: 150px;
-    width: 80%;
-    margin-left: 10%;
-    margin-left: 10%;
     overflow: hidden;
-    display: block;
-    margin-top: 55px;
     margin-bottom: 20px;
     text-align: center;
-    background-color: #B2DFDB;
-    opacity: 0.6;
-    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.3);
-}
-
-.div_accueil:hover{
-    cursor: pointer;
-    opacity: 1;
     background-color: #B2DFDB;
 }
 
@@ -33,9 +20,17 @@ section.accueil{
     background: url("img/sayagata-400px.png") repeat;
 }
 
+section.accueil .container {
+  padding-top: 85px;
+}
+
 /* Page recettes */
 
+/* sidebar */
 
+.sidebar {
+  background-color: white;
+}
 
 
 /* nav style

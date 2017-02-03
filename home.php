@@ -5,7 +5,7 @@
 
     <div class="container">
 
-      <div class="div_accueil">
+      <div class="div_accueil col-md-8">
           <h2 class="title">Derniere recettes</h2>
           <?php
             if (have_posts()):
@@ -25,14 +25,9 @@
             endif;
            ?>
       </div>
-      <div class="div_accueil">
-          <h2 class="title">Recettes du moment</h2>
-      </div>
-      <div class="div_accueil">
-          <h2 class="title">Les indémodables</h2>
-      </div>
-  </div>
 
+      <?php get_sidebar(); ?>
+  </div>
 </section>
 
-<?php get_footer();
+<?php get_footer(); ?>
