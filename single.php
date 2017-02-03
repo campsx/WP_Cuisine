@@ -24,6 +24,13 @@ get_header();
                             </div>
                             <?php the_content(); ?>
                         </article>
+                        
+                        <?php
+                            /* Affichage des commentaires de l'articles */
+                            if ( comments_open() || get_comments_number() ) {
+                                comments_template();
+                            }
+                        ?>
             <?php
                     endwhile;
                 else:
