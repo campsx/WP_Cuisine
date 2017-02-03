@@ -18,7 +18,7 @@ get_header();
                     <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
                         <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
                         <?php the_post_thumbnail('medium'); ?>
-                        <p><?php the_excerpt(); ?></p>
+                        <?php echo displayDifficulty( get_post_custom_values('niveau')[0] );?>                        
                         <p class="text-right">Par : <?php the_author(); ?> </p>
                         <hr>
                     </article>
@@ -28,6 +28,7 @@ get_header();
                 echo "<h3>Pas d'article</h3>";
             endif;
         ?>
+        <
       </section>
       <?php get_sidebar();?>
   </div>
