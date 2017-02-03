@@ -42,7 +42,16 @@ section.page404 {
     text-align: center;
 }
 
-/* Page recettes */
+/* Page */
+
+section.page {
+    background: url("img/symphony.png") repeat;
+}
+
+section.page .container {
+    padding-top: 85px;
+    padding-bottom: 35px;
+}
 
 /* sidebar */
 .sidebar {
