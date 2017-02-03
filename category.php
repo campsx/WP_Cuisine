@@ -19,7 +19,7 @@ get_header();
                     <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
                         <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
                         <?php the_post_thumbnail('medium'); ?>
-                        <p class=""><?php the_excerpt(); ?></p>
+                        <p><?php the_excerpt(); ?></p>
                         <p class="text-right">Par : <?php the_author(); ?> </p>
                         <hr>
                     </article>
