@@ -51,3 +51,63 @@ function wp_Cuisine_scripts(){
   wp_enqueue_style( 'WP_Cuisine-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'wp_Cuisine_scripts' );
+
+
+/* Custom widget */
+add_action('widgets_init', 'my_custom_widget');
+
+function my_custom_widget() {
+  register_widget('CustomWidget');
+}
+
+
+class CustomWidget extends WP_Widget
+{
+
+  function CustomWidget()
+  {
+    parent::__construct(false, 'Widget lien facile');
+    $options = [
+      'classname' => 'custom-link',
+      'description' => 'Widget pour faire un lien facilement',
+    ];
+    $this->WP_Widget("custom-widget", "Widget Lien facile", $options);
+  }
+
+  function widget($arg, $values)
+  {
+    echo '<a href="'.$values['url'].'">'.$values['name'].'</a>';
+  }
+
+  function update($new, $old)
+  {
+    return $new;
+  }
+
+  function form($values)
+  {
+    $default = [
+      'name' => 'Google',
+      'url' => 'http://www.google.fr'
+    ];
+    $values = wp_parse_args($values, $default);
+    echo '
+    <p>
+      <label for="'.$this->get_field_id('name').'">
+        Name :
+      </label>
+      <input type="text" value="'.$values['name'].'"
+      id="'.$this->get_field_id('name').'"
+      name="'.$this->get_field_name('name').'">
+    </p>
+    <p>
+      <label for="'.$this->get_field_id('url').'">
+        URL :
+      </label>
+      <input type="text" value="'.$values['url'].'"
+      id="'.$this->get_field_id('url').'"
+      name="'.$this->get_field_name('url').'">
+    </p>
+    ';
+  }
+}
