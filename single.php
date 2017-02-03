@@ -6,7 +6,7 @@ get_header();
 
     <div class="container">
         <h1 class="title-page">Recettes <?php wp_title(); ?></h1>
-        <section class="div_accueil col-md-7" style="padding:10px;">
+        <section class="div_accueil col-md-8" style="padding:10px;">
             <?php
                 if (have_posts()):
                     while (have_posts()):
