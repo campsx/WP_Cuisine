@@ -12,12 +12,14 @@
               while (have_posts()):
                 the_post();
           ?>
-                <div <?php post_class();?> id="post-<?php the_ID(); ?>">
-                  <h3><?php the_title();?></h3>
-                  <?php the_post_thumbnail('medium'); ?>
-                  <?php the_content(); ?>
-                  <a href="<?php the_permalink(); ?>">Voir</a>
-                </div>
+            <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
+                <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
+                <?php the_post_thumbnail('medium'); ?>
+                <?php echo displayDifficulty( get_post_custom_values('niveau')[0] );?>
+                <p><?php the_excerpt(); ?></p>
+                <p class="text-right">Par : <?php the_author(); ?> </p>
+                <hr>
+            </article>
           <?php
               endwhile;
             else:

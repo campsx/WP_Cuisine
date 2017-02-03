@@ -1,33 +1,25 @@
 <?php
-get_header();
-//
-// $loop = new WP_Query(['post_type' => 'events']);
-//
-// while ($loop->have_posts()) {
-//   $loop->the_post();
-//   the_title();
-//   the_content();
-// }
-//
-// dynamic_sidebar('sidebar-1');
+  get_header();
 ?>
 <section class="accueil">
 
     <div class="container">
 
-      <div class="div_accueil">
+      <div class="div_accueil col-md-8">
           <h2 class="title">Derniere recettes</h2>
           <?php
             if (have_posts()):
               while (have_posts()):
                 the_post();
           ?>
-                <div <?php post_class();?> id="post-<?php the_ID(); ?>">
-                  <h3><?php the_title();?></h3>
-                  <?php the_post_thumbnail('medium'); ?>
-                  <?php the_content(); ?>
-                  <a href="<?php the_permalink(); ?>">Voir</a>
-                </div>
+            <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
+                <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
+                <?php the_post_thumbnail('medium'); ?>
+                <?php echo displayDifficulty( get_post_custom_values('niveau')[0] );?>
+                <p><?php the_excerpt(); ?></p>
+                <p class="text-right">Par : <?php the_author(); ?> </p>
+                <hr>
+            </article>
           <?php
               endwhile;
             else:
@@ -35,14 +27,9 @@ get_header();
             endif;
            ?>
       </div>
-      <div class="div_accueil">
-          <h2 class="title">Recettes du moment</h2>
-      </div>
-      <div class="div_accueil">
-          <h2 class="title">Les indémodables</h2>
-      </div>
-  </div>
 
+      <?php get_sidebar(); ?>
+  </div>
 </section>
 
-<?php get_footer();
+<?php get_footer(); ?>
