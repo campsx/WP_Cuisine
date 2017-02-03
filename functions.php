@@ -82,3 +82,24 @@ function wpdocs_my_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'wpdocs_my_search_form' );
+
+function displayDifficulty($difficulty){
+	$value = null;
+	$difficulty = trim(strtolower($difficulty));
+	
+	if($difficulty == "facile" || $difficulty == "moyen" || $difficulty == "difficile"){
+
+		$value .= '<h4>Difficulté : <i class="fa fa-star" aria-hidden="true"></i>';
+		if($difficulty == "facile")
+			$value .= '<i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+		else if($difficulty == "moyen")
+			$value .= '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>';
+		else
+			$value .= '<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>';
+		$value .= "</h4>";
+
+	}elseif($difficulty != null){
+		$value .= "<h4>Difficulté : Mal-renseignée : Merci de choisir 'facile', 'moyen' ou 'difficile'</h4>";
+	}
+	return $value;
+}
