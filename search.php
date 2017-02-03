@@ -1,22 +1,12 @@
 <?php
-get_header();
-//
-// $loop = new WP_Query(['post_type' => 'events']);
-//
-// while ($loop->have_posts()) {
-//   $loop->the_post();
-//   the_title();
-//   the_content();
-// }
-//
-// dynamic_sidebar('sidebar-1');
+  get_header();
 ?>
 <section class="accueil">
 
     <div class="container">
 
-      <div class="div_accueil">
-          <h2 class="title">Derniere recettes</h2>
+      <div class="div_accueil col-md-7">
+          <h2 class="title">Recherche</h2>
           <?php
             if (have_posts()):
               while (have_posts()):
@@ -31,18 +21,13 @@ get_header();
           <?php
               endwhile;
             else:
-              echo "<h3>Pas d'article</h3>";
+              echo "<h3>Rien trouver</h3>";
             endif;
            ?>
       </div>
-      <div class="div_accueil">
-          <h2 class="title">Recettes du moment</h2>
-      </div>
-      <div class="div_accueil">
-          <h2 class="title">Les indémodables</h2>
-      </div>
-  </div>
 
+      <?php get_sidebar(); ?>
+  </div>
 </section>
 
-<?php get_footer();
+<?php get_footer(); ?>

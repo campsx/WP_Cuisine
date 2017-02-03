@@ -12,21 +12,18 @@ get_header();
                     while (have_posts()):
                         the_post();
             ?>          
-                        <article class="text-left two-colonnes">
-                            <div class="col-1">
+                        <article class="text-left">
+                            <h2 class="title text-center"><?php the_title();?></h2>
+                            <p class="text-center"><?php the_category(",")?> proposé par <?php the_author(); ?> </p>
+                            <div class="text-center">
                                 <?php if ( has_post_thumbnail() ) :
-                                    the_post_thumbnail();
-                                else:
-                                    echo '<img class="single-thumbnail" src="'. get_template_directory_uri() .'/img/no-image.jpg" alt="Pas d\'image pour cet article">';
-                                endif;
-                                ?>
+                                        the_post_thumbnail();
+                                    else:
+                                        echo '<img class="no-thumbnail" src="'. get_template_directory_uri() .'/img/no-image.jpg" alt="Pas d\'image pour cet article">';
+                                    endif;
+                                    ?>
                             </div>
-                                <h2 class="title text-center"><?php the_title();?></h2>
-                                <p class="text-center"><?php the_category(",")?> proposé par <?php the_author(); ?> </p>
-                                <?php the_content(); ?>
-                            <div class="col-2">
-                                
-                            </div>
+                            <?php the_content(); ?>
                         </article>
             <?php
                     endwhile;
@@ -35,6 +32,7 @@ get_header();
                 endif;
             ?>
         </section>
+        <?php get_sidebar(); ?>
     </div>
 </section>
 <?php get_footer();

@@ -10,22 +10,9 @@ Version: 0.0.1
 
 .div_accueil{
     min-height: 150px;
-    width: 80%;
-    margin-left: 10%;
-    margin-left: 10%;
     overflow: hidden;
-    display: block;
-    margin-top: 55px;
     margin-bottom: 20px;
     text-align: center;
-    background-color: #B2DFDB;
-    opacity: 0.6;
-    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.3);
-}
-
-.div_accueil:hover{
-    cursor: pointer;
-    opacity: 1;
     background-color: #B2DFDB;
 }
 
@@ -33,25 +20,60 @@ section.accueil{
     background: url("img/sayagata-400px.png") repeat;
 }
 
+
+section.accueil .container {
+  padding-top: 85px;
+}
+
+/* Page 404 */
+section.page404 {
+    background: url("img/footer_lodyas.png") repeat;
+		height: 60vh;
+}
+
+#div404 {
+    height: 200px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+}
+
 /* Page recettes */
 
+/* sidebar */
+.sidebar {
+  background-color: white;
+}
+
+.searchform {
+  margin-bottom: 30px;
+}
 
 /* Single.php */
 /* =================================================== */
 
-.single .two-colonnes{
-    width: 100%;
+.single article{
+	width: 100%;
+	padding: 10px;	
 }
 
-.single .two-colonnes .col-1,
-.single .two-colonnes .col-2{
-    float: right;
+.single img{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
-.single .single-thumbnail{
-	height: 300px;
-	max-width: 100%;   
+.single .no-thumbnail{
+	width:40%;
+	height: auto;
 }
+
 
 
 /* nav style
@@ -63,7 +85,7 @@ section.accueil{
 }
 
 .title-page {
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 
@@ -146,4 +168,5 @@ footer a:hover {
 		font-size: 13px;
 		line-height: 24px;
 	}
+
 }
