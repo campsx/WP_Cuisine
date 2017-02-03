@@ -18,8 +18,9 @@ if (!empty($post->post_password)) { // if there's a password
 	<h3>Commentaire</h3>
 	<?php /* On affiche chaque commentaire */ ?>
 	<?php foreach ($comments as $comment) : ?>
-		<strong>Par <?php comment_author_link() ?></strong>
-		<?php comment_text() ?>
+		<div class="comment_title"> <strong>Par <?php comment_author_link() ?></strong> </div>
+		<div class="comment_text"> <?php comment_text() ?> </div>
+		<div class="comment_info"> Créé le <?php comment_date('j F, Y') ?> à <?php comment_time() ?></a></div>
 	<?php endforeach; ?>
 <?php endif; ?>
 </div>
