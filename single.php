@@ -24,13 +24,6 @@ get_header();
                             </div>
                             <?php the_content(); ?>
                         </article>
-                        
-                        <?php
-                            /* Affichage des commentaires de l'articles */
-                            if ( comments_open() || get_comments_number() ) {
-                                comments_template();
-                            }
-                        ?>
             <?php
                     endwhile;
                 else:
@@ -39,6 +32,14 @@ get_header();
             ?>
         </section>
         <?php get_sidebar(); ?>
+        <section class="col-md-8" style="padding:10px;">
+            <?php
+                /* Affichage des commentaires de l'articles */
+                if ( comments_open() || get_comments_number() ) {
+                    comments_template();
+                }
+            ?>
+        </section>
     </div>
 </section>
 <?php get_footer();
