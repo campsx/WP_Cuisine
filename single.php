@@ -5,7 +5,7 @@ get_header();
 <section class="accueil">
 
     <div class="container">
-        <section class="div_accueil col-md-8" style="padding:10px;">
+        <section class="single_article col-md-8" style="padding:10px;">
             <?php
                 if (have_posts()):
                     while (have_posts()):
@@ -29,11 +29,7 @@ get_header();
                 else:
                     echo "<h3>Pas d'article</h3>";
                 endif;
-            ?>
-        </section>
-        <?php get_sidebar(); ?>
-        <section class="col-md-8" style="padding:10px;">
-            <?php
+
                 /* Affichage des commentaires de l'articles */
                 if ( comments_open() || get_comments_number() ) {
                     comments_template();

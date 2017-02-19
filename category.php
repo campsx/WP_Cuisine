@@ -7,7 +7,9 @@ get_header();
   <div class="container">
     <h2 class="title-page">Catégorie <?php wp_title(); ?></h2>
       <section class="div_accueil recettes col-md-8">
-        <h2 class="title">Dernières recettes</h2>
+          <div id="title">
+              <h2 class="title"><?php wp_title(); ?></h2>
+          </div>
         <?php
             if (have_posts()):
         ?>
@@ -15,7 +17,7 @@ get_header();
                 while (have_posts()):
                     the_post();
                 ?>
-                    <article class="<?php post_class();?>" id="post-<?php the_ID(); ?>">
+                    <article class="an_article" id="post-<?php the_ID(); ?>">
                         <h3><a href="<?php the_permalink(); ?>">Recette : <?php the_title();?></a></h3>
                         <?php the_post_thumbnail('medium'); ?>
                         <?php echo displayDifficulty( get_post_custom_values('niveau')[0] );?>

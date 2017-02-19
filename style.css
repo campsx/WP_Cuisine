@@ -11,15 +11,37 @@ Version: 0.0.1
 .div_accueil{
     min-height: 150px;
     overflow: hidden;
-    margin-bottom: 20px;
     text-align: center;
-    background-color: #B2DFDB;
+    margin-bottom: 15px;
+}
+.an_article {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    -webkit-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
 }
 
 section.accueil{
-    background: url("img/sayagata-400px.png") repeat;
+    background: url("img/hotdogs.jpg") repeat;
 }
 
+#title {
+    padding: 10px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    -webkit-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+}
+
+.title {
+    color: #757575;
+    font-size: 4em;
+}
 
 section.accueil .container {
   padding-top: 85px;
@@ -55,8 +77,11 @@ section.page .container {
 
 /* sidebar */
 .sidebar {
-  border-left: solid 1px white;
-  background-color: #B2DFDB;
+    border-radius: 13px;
+    background-color: #EEEEEE;
+    -webkit-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
 }
 
 .searchform {
@@ -84,15 +109,49 @@ section.page .container {
 	height: auto;
 }
 
+.single_article {
+    min-height: 150px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 50px;
+}
+
 
 
 /* Comments.php */
 /* =================================================== */
 
+.comment_input {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .comments h3 {
-	background-color: #92AFAB;
 	width: 100%;
 	padding: 10px;
+}
+
+div.comments {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+div.a_comment {
+    border-radius: 22px ;
+    -moz-border-radius: 22px 22px 22px 22px;
+    -webkit-border-radius: 22px 22px 22px 22px;
+    border: 2px double #000000;
+    background-color: #ffb76e;
+    padding:10px;
+    margin: 5px;
+
 }
 
 /* nav style
@@ -105,6 +164,12 @@ section.page .container {
 
 .title-page {
   margin-bottom: 60px;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    padding: 15px;
+    -webkit-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 9px 14px 0px rgba(0,0,0,0.75);
 }
 
 
