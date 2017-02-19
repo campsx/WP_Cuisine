@@ -18,7 +18,7 @@ get_header();
                                 <?php if ( has_post_thumbnail() ) :
                                         the_post_thumbnail();
                                     else:
-                                        echo '<img class="no-thumbnail" src="'. get_template_directory_uri() .'/img/no-image.jpg" alt="Pas d\'image pour cet article">';
+                                        echo '<img class="hovereffect no-thumbnail" src="'. get_template_directory_uri() .'/img/no-image.jpg" alt="Pas d\'image pour cet article">';
                                     endif;
                                     ?>
                             </div>
